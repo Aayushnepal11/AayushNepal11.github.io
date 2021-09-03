@@ -1,0 +1,235 @@
+/*  ----------- Basic setup --------------- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    background-color: #dfe6e9;
+    animation: morph 5s infinite linear alternate;
+}
+
+/* --- container with the name user-profile ---  */
+
+.user-profile{
+    box-sizing: border-box;
+    width: 500px;
+    height: 900px;
+    margin: 0px auto;
+    border: 1px solid rgb(179, 178, 178);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: background-color 300ms ease-out;
+}
+
+.user-profile:hover,
+.user-profile:active{
+    color: #fff;
+}
+
+/* image as thumbnail division */
+
+.thumbnail{
+    width: 100%;
+    height: 550px;
+    padding: 0 0 50px 0;
+    overflow: hidden;
+}
+
+.thumbnail img{
+    width: 100%;
+    animation: colorchange 5s infinite;
+}
+
+/* ----- Basic Content ------- */ 
+
+.content{
+    text-align: center;
+}
+
+.content h1{
+    margin: 10px 0;
+    font-size: 40px;
+    animation: text 3s infinite;
+    color: #eaeaea;
+}
+
+.content p{
+    margin-top: 30px;
+    font-size: 30px;
+    color: rgb(212, 18, 148);
+}
+
+  /* ------------------------------ */
+ /*  -------- Animations --------- */
+/*   ---------------------------- */
+
+/* --- Name animation as the text ---- */
+@keyframes text {
+    0%{
+        color: black;
+        margin-bottom: -5px;
+    }
+    30%{
+        color: #fff;
+        letter-spacing: 5px;
+        margin-bottom: -7px;
+    }
+    80%{
+        color: #fcfcfc;
+        letter-spacing: 7px;
+        margin-bottom: -10px;
+    }
+}
+
+/* ----------- thumbnail image -------  */
+@keyframes colorchange{
+    0%{
+        opacity: .6;
+        filter: brightness(100%);
+    }
+    50%{
+        opacity: .7;
+        filter: sepia(5%);
+    }
+    100%{
+        opacity: 1;
+        filter: hue-rotate(-180deg);
+    }
+}
+
+/* ---------- Body Animation ----------- */
+@keyframes morph {
+    0%{
+        background-color: #dfe6e9;
+        width: 100%;
+        height: 100%;
+    }
+    10%{
+        background-color: #636e72;
+        width: 100%;
+        height: 100%;
+    }
+    20%{
+        background-color: #b2bec3;
+        width: 100%;
+        height: 100%;
+    }
+    30%{
+        background-color: #95afc0;
+        width: 100%;
+        height: 100%;
+    }
+    40%{
+        background-color: #b2bec3;
+        width: 100%;
+        height: 100%;
+    }
+    50%{
+        background-color: #dff9fb;
+        width: 100%;
+        height: 100%;
+    }
+    60%{
+        background-color: #7f8fa6;
+        width: 100%;
+        height: 100%;
+    }
+    70%{
+        background-color: #353b48;
+        width: 100%;
+        height: 100%;
+    }
+    80%{
+        background-color: #576574;
+        width: 100%;
+        height: 100%;
+    }
+    90%{
+        background-color: #c8d6e5;
+        width: 100%;
+        height: 100%;
+    }
+    100%{
+        background-color: #82ccdd;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+  /* ----------------------------  */
+ /* ---------- Social Icons ----- */
+/*  ---------------------------  */
+
+.social-icons{
+    padding: 19px;
+    text-align: center;
+    color: #2c3e50;
+    height: 100px;
+}
+
+.social-icons span {
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.social-icons i{
+    font-size: 40px;
+}
+
+.social-icons .ion-paper-airplane{
+    color: #3b5998;
+}
+
+.social-icons .ion-social-linkedin-outline{
+    color: #007bb6;
+}
+
+.social-icons .ion-social-twitter-outline{
+    color: #00aced;
+}
+
+.ion-paper-airplane:hover,
+.ion-social-linkedin-outline:hover,
+.ion-social-twitter-outline:hover{
+    border:  1px solid #fff;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 55px;
+}   
+
+@media screen and (max-device-width: 460px) {
+    body{
+        font-size: 180%;
+    }
+    .user-profile{
+        width: 400px;
+        height: 800px;
+    }
+
+    .content h1{
+        font-size: 30px;
+        font-weight: 300;
+        font-style: italic;
+    }
+    .thumbnail{
+        height: 500px;
+    }
+    .content p{
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    .social-icons{
+        padding: 10px;
+        height: auto;
+    }
+
+}
+
